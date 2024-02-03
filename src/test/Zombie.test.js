@@ -1,15 +1,17 @@
 import Zombie from '../class/Zombie';
 
-test('Правильно создаётся объект', () => {
-  const zombie = new Zombie('Zombie');
-  const correct = {
+describe('Zombie creation', () => {
+  test('should create a Zombie correctly', () => {
+    const zombie = new Zombie('Nikita', 'Zombie');
+    const correctZombie = {
     attack: 40,
     defence: 10,
     health: 100,
     level: 1,
-    name: 'Zombie',
+    name: 'Nikita',
     type: 'Zombie',
   };
 
-  expect(zombie).toEqual(correct);
+  expect(zombie).toEqual(correctZombie);
+});
 });

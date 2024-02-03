@@ -1,15 +1,17 @@
 import Bowman from '../class/Bowman.js';
 
-test('Правильно создаётся объект', () => {
-  const bowman = new Bowman('Bowman');
-  const correct = {
-    attack: 25,
-    defence: 25,
-    health: 100,
-    level: 1,
-    name: 'Bowman',
-    type: 'Bowman',
-  };
+describe('Bowman creation', () => {
+  test('should create a Bowman correctly', () => {
+    const bowman = new Bowman('Robin', 'Bowman');
+    const correctBowman = {
+      name: 'Robin',
+      type: 'Bowman',
+      health: 100,
+      level: 1,
+      attack: 25,
+      defence: 25,
+    };
 
-  expect(bowman).toEqual(correct);
+    expect(bowman).toEqual(correctBowman);
+  });
 });

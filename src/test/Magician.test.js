@@ -1,15 +1,17 @@
 import Magician from '../class/Magician';
 
-test('Правильно создаётся объект', () => {
-  const magician = new Magician('Magician');
-  const correct = {
-    attack: 10,
-    defence: 40,
-    health: 100,
-    level: 1,
-    name: 'Magician',
-    type: 'Magician',
-  };
+describe('Magician creation', () => {
+  test('should create a Magician correctly', () => {
+    const magician = new Magician('Merlin', 'Magician');
+    const correctMagician = {
+      name: 'Merlin',
+      type: 'Magician',
+      health: 100,
+      level: 1,
+      attack: 10,
+      defence: 40,
+    };
 
-  expect(magician).toEqual(correct);
+    expect(magician).toEqual(correctMagician);
+  });
 });
